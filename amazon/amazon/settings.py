@@ -42,9 +42,11 @@ INSTALLED_APPS = [
 
     "Auth_app",
     "Forms_app",
-
+    "Session_app",
+    "JWT_app",
 
     'rest_framework',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +133,13 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "Static"),)
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+
+}
