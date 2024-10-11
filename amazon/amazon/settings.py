@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "Forms_app",
     "Session_app",
     "JWT_app",
+    "Signals_app",
 
     'rest_framework',
     'rest_framework_simplejwt',
