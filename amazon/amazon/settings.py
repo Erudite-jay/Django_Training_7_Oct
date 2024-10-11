@@ -45,9 +45,12 @@ INSTALLED_APPS = [
     "Session_app",
     "JWT_app",
     "Signals_app",
+    "Channel_app",
 
     'rest_framework',
     'rest_framework_simplejwt',
+    'channels',
+    
 ]
 
 MIDDLEWARE = [
@@ -78,7 +81,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'amazon.wsgi.application'
+# WSGI_APPLICATION = 'amazon.wsgi.application'
+ASGI_APPLICATION = 'amazon.asgi.application'
 
 
 # Database
